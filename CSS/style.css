@@ -903,6 +903,13 @@ Color changes in some parts of the websites, in dark theme
     background-color: var(--white-color);
 }
 
+.projects__description-box {
+    margin-block: 0.5rem;
+}
+
+.mt-1 {
+    margin-block: 0.3rem 0;
+}
 
 /* CONTACT */
 .contact {
