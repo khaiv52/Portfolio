@@ -65,6 +65,25 @@ const sendEmail = (e) => {
 
 contactForm.addEventListener('submit', sendEmail)
 
+// SHOW LESS / MORE BUTTON
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach(function (checkbox) {
+    var section = checkbox.closest('.projects__description');
+    var readMoreLabel = section.querySelector('.read__more');
+    var textIntro = section.querySelector('.text__intro');
+
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            readMoreLabel.style.display = 'none';
+            textIntro.classList.add('full__content');
+        } else {
+            readMoreLabel.style.display = 'inline-block';
+            textIntro.classList.remove('full__content');
+        }
+    });
+});
+
 // SHOW SCROLL UP
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')

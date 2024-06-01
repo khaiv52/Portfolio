@@ -876,6 +876,7 @@ Color changes in some parts of the websites, in dark theme
     display: flex;
     align-items: center;
     column-gap: 1rem;
+    margin-top: 2rem;
 }
 
 .projects__link {
@@ -909,6 +910,57 @@ Color changes in some parts of the websites, in dark theme
 
 .mt-1 {
     margin-block: 0.3rem 0;
+}
+
+/* Read more - show less button */
+#ch {
+    display: none;
+}
+
+.read__more,
+.show__less {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.show__less {
+    margin-top: 1.5rem;
+}
+
+.text__intro {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read__more {
+    margin-top: 1rem;
+}
+
+#ch:not(:checked) ~ .content,
+#ch1:not(:checked ~ .content),
+#ch2:not(:checked ~ .content),
+#ch3:not(:checked ~ .content) {
+    display: none;
+}
+
+#ch:checked ~ .content,
+#ch1:checked ~ .content,
+#ch2:checked ~ .content,
+#ch3:checked ~ .content {
+    display: block;
+}
+
+.full__content {
+    -webkit-line-clamp: unset;
+}
+
+.content {
+    display: none;
 }
 
 /* CONTACT */
