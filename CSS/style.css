@@ -944,14 +944,16 @@ Color changes in some parts of the websites, in dark theme
 #ch:not(:checked) ~ .content,
 #ch1:not(:checked ~ .content),
 #ch2:not(:checked ~ .content),
-#ch3:not(:checked ~ .content) {
+#ch3:not(:checked ~ .content),
+#ch4:not(:checked ~ .content) {
     display: none;
 }
 
 #ch:checked ~ .content,
 #ch1:checked ~ .content,
 #ch2:checked ~ .content,
-#ch3:checked ~ .content {
+#ch3:checked ~ .content,
+#ch4:checked ~ .content {
     display: block;
 }
 
